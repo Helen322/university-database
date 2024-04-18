@@ -1,0 +1,30 @@
+CREATE DATABASE UniverityDB;
+USE UniverityDB;
+CREATE TABLE Students
+(StudentID INT PRIMARY KEY,
+ FirstName VARCHAR (50),
+ LastName VARCHAR (50),
+ Age INT,
+ Major VARCHAR (50)
+ );
+INSERT INTO Students(StudentID,FirstName,LastName, Age,Major)
+VALUES (1,'helen','Olga','23', 'Business'),
+	   (2,'Foster', 'Karen','26','Law');
+       
+ALTER TABLE Students
+ADD GPAVALUE decimal(10,2);
+ALTER DATABASE univeritydb
+MODIFY NAME = EnrolledStudents;
+
+CREATE TABLE Courses
+(CourseID INT PRIMARY KEY,
+CourseName varchar(50),
+Instructor varchar(50),
+Credits INT
+);
+INSERT INTO Courses(CourseID,CourseName,Instructor,Credits)
+VALUES (4, 'DATA ANALYSIS', 'Ombui', '3'),
+       (5, 'DATA SCIENCE' , 'MR ALLEN','6'),
+       (6, 'CYBER SECURITY', 'MR OGUNA','7');
+DROP database EnrolledStudents;
+       
